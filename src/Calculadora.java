@@ -1,17 +1,16 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Calculadora {
 
     // Devuelve el valor con 2 decimales
-    double to2dec(double valor) {
+    private double to2dec(double valor) {
         return Math.floor(valor * 100) / 100d;
     }
 
     public int valorDeUnTexto(String text) {
-        List<String> nombres = new ArrayList<String>(
-                Arrays.asList("cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"));
+        List<String> nombres = new ArrayList<>(
+                List.of("cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"));
 
         String textValid = text.toLowerCase().trim();
         int idx = nombres.indexOf(textValid);
@@ -33,18 +32,16 @@ public class Calculadora {
         List<Double> proporciones = new ArrayList<Double>();
 
         int totalValores = 0;
-        for (int i : valores)
-            totalValores += i;
+        for (int v : valores)
+            totalValores += v;
 
         for (int i = 0; i < valores.size(); i++) {
             double d = (total * valores.get(i)) / (double) totalValores;
-            proporciones.add( to2dec(d));
-
+            proporciones.add(to2dec(d));
         }
 
         return proporciones;
     }
-
 
     public List<Double> valoresProporcionalesDeTexto(String texto, int total) {
         List<Integer> valores = valoresDelTexto(texto);
