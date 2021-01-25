@@ -1,8 +1,7 @@
 
 ### Conceptos básicos necesarios
 - Regla de 3
-
-  y la inversa
+  y su inversa
 
 ### Conceptos de programación
 - Clase
@@ -126,5 +125,80 @@ public void init() {
 @BeforeEach 
 void init() {
     list.add("teste3");
+}
+```
+
+## plantilla
+
+```
+ARCHIVO Calculadora.java
+public class Calculadora {
+
+    // Devuelve el valor del parámetro con 2 decimales
+    private double to2dec(double valor) {
+        return Math.floor(valor * 100) / 100d;
+    }
+
+    // Dado una palabra devuelve el valor de su nombre: De cero a nueve
+    // cero ->0, uno->, etc...
+    // el nombre podrá estar escrito de cualquier manera, mayúsculas, minusculas, etc
+    // Una palabra no reconocida tiene el valor de 0.
+    public int valorDeUnTexto(String text) {
+        int valor
+        ...
+        return valor;
+    }
+
+    // De un texto con varias palabras devuelve el valos de cada palabra en forma de
+    // Lista de enteros
+    public List<Integer> valoresDelTexto(String text) {
+        List<Integer> valores = new ArrayList<Integer>();
+        ...
+        return valores;
+    }
+
+    // Dada una lista de enteros, dado un total, obtiene una lista de valores
+    // proporcionales respecto al total proporcionado
+    // ej: valores 1,2,3;  total 120px  --> 20,40,60  <-- double
+        public List<Double> valoresProporcionalesDeLista(List<Integer> valores, int total) {
+        List<Double> proporciones = new ArrayList<Double>();
+        ...
+        return proporciones;
+    }
+
+    // Idem que el anterior, pero en lugar de una lista de enteros 
+    // se pasa un String con varias palabras
+    public List<Double> valoresProporcionalesDeTexto(String texto, int total) {
+        List<Double> proporciones = new ArrayList<Double>();
+        ...
+        return proporciones;
+    }
+}
+
+ARCHIVO CalculadoraTest.java
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+
+public class CalculadoraTest {
+
+    @Test
+    @DisplayName("De Texto a Lista de valores1")
+    void nombreFuncionN() {
+       
+    }
+
+
+    @ParameterizedTest
+    @DisplayName("Valoración de varios parámetros")
+    @ValueSource(strings = { "s1", " S2  ", " s3   " })
+    void nombreFuncionN(String param) {
+
+        bool result = param.contains("");
+        assertEquals(1, result, result + "->" + param);
+    }
+
 }
 ```

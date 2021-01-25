@@ -16,8 +16,7 @@
 ## Enunciado
 Una aplicación de estadística necesita calcular proporciones para presentar gráficos.
 Crea una clase Calculadora que nos calcule valores proporcionales dados como en el siguiente ejemplo:
-  - El resultado de una determinada prueba de Covid19 ha sido `'  Dos  UnO Tres CUATRO  '`.  
-  Y debemos representar esos valores en una barra que tiene 100px de alto.
+  - El resultado de una determinada prueba de estadística ha sido `'  Dos  UnO Tres CUATRO  '`.    Y debemos representar esos valores en una barra que tiene 100px de alto.
   - El resultado debe ser otra lista, que para el ejemplo anterior sería 20, 10, 30 y 40, y que la parte gráfica de la aplicación se encargará de presentar.
 
 ## SE PIDE
