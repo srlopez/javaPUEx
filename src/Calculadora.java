@@ -8,7 +8,7 @@ public class Calculadora {
         return Math.floor(valor * 100) / 100d;
     }
 
-    public int valorDeUnTexto(String text) {
+    public int valorDeUnaPalabra(String text) {
         List<String> nombres = new ArrayList<>(
                 List.of("cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"));
 
@@ -17,18 +17,18 @@ public class Calculadora {
         return idx < 0 ? 0 : idx;
     }
 
-    public List<Integer> valoresDelTexto(String text) {
+    public List<Integer> valoresDeVariasPalabras(String text) {
         List<Integer> valores = new ArrayList<Integer>();
 
         String[] textos = text.trim().split("\\s+");
         for (int i = 0; i < textos.length; i++) {
-            valores.add(valorDeUnTexto(textos[i]));
+            valores.add(valorDeUnaPalabra(textos[i]));
         }
 
         return valores;
     }
 
-    public List<Double> valoresProporcionalesDeLista(List<Integer> valores, int total) {
+    public List<Double> valoresProporcionalesDeUnaListaInteger(List<Integer> valores, int total) {
         List<Double> proporciones = new ArrayList<Double>();
 
         int totalValores = 0;
@@ -43,9 +43,9 @@ public class Calculadora {
         return proporciones;
     }
 
-    public List<Double> valoresProporcionalesDeTexto(String texto, int total) {
-        List<Integer> valores = valoresDelTexto(texto);
-        List<Double> proporciones = valoresProporcionalesDeLista(valores, total);
+    public List<Double> valoresProporcionalesDeVariasPalabras(String texto, int total) {
+        List<Integer> valores = valoresDeVariasPalabras(texto);
+        List<Double> proporciones = valoresProporcionalesDeUnaListaInteger(valores, total);
         return proporciones;
     }
 }

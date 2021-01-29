@@ -35,7 +35,7 @@
 ```java
   if(){...}
   if(){...}else{...}
-  if(){...}elseif(){...}
+  if(){...}else if(){...}
   String valor =  1<4?"cierto":"falso";
   for(int i=0, j=0; (?) ;i++, j++ ){...}, while(){...}
   for (int v : valores) t += v;
@@ -43,11 +43,13 @@
 - ArrayList/Array <- Conversiones y Declaraciones, Metodos
 ```java
   // Declaraciones e inicialización
-  List<Double> nds = new ArrayList<Double>();
-  List<Double> nds = new ArrayList<Double>(List.of(5d,6d,7d));
+  List<Double> nds; //nulo
+  List<Double> nds = new ArrayList<Double>(); // creado
+  List<Double> nds = new ArrayList<Double>(List.of(5d,6d,7d)); // establecido con valores
   List<String> dias = new ArrayList<>(
-                List.of("lunes", "martes", ..., "domingo"));
+                List.of("lunes", "martes", ..., "domingo")); //Estblecido con strings
   
+  // Conversion
   // De array a List
   int[] ints = {1, 2, 3};
   List<Integer> intList = new ArrayList<Integer>(ints.length);
@@ -71,10 +73,10 @@
 - Manejo de strings; split, toLower, ...
 ```java
   text.toLowerCase()
-  text.trim();  
+  text.trim();  //trip()
   text.substring(3,6);
   text.replace("bb", "DGDG")
-  String[] strs = text.split(";")
+  String[] strs = text.split(";")  // obtenemos los textos que se separan por ";"
   text.length()
 ```
 - Recursividad

@@ -19,10 +19,12 @@ public class CalculadoraTest {
         // 1 - preracion del test
         Calculadora calc = new Calculadora();
         // 2 - Ejecutar lo que vamos a validar
-        int result = calc.valorDeUnTexto(txt);
+        int result = calc.valorDeUnaPalabra(txt);
         // 3 - Aserciones
         assertEquals(1, result, result + "->" + txt);
     }
+
+    //Similara para DOS, TRES, etc...
 
     @Test
     @DisplayName("De Texto a Lista de valores1")
@@ -30,11 +32,11 @@ public class CalculadoraTest {
         // 1 - preracion del test
         Calculadora calc = new Calculadora();
         // 2 - Ejecutar lo que vamos a validar
-        String texto = "uno dos seis";
-        List<Integer> result = calc.valoresDelTexto(texto);
+        String texto = "Hey uNo dOs sEIs santi";
+        List<Integer> result = calc.valoresDeVariasPalabras(texto);
         // 3 - Aserciones
         List<Integer> valoresEsperados = new
-        ArrayList<Integer>(Arrays.asList(1,2,6));
+        ArrayList<Integer>(Arrays.asList(0,1,2,6,0));
         assertEquals(valoresEsperados, result);
     }
 
@@ -46,21 +48,21 @@ public class CalculadoraTest {
         // 2 - Ejecutar lo que vamos a validar
         List<Integer> valores = new ArrayList<Integer>(Arrays.asList(1, 2, 6));
         int total = 6;
-        List<Double> result = calc.valoresProporcionalesDeLista(valores, total);
+        List<Double> result = calc.valoresProporcionalesDeUnaListaInteger(valores, total);
         // 3 - Aserciones
         List<Double> valoresEsperados = new ArrayList<Double>(Arrays.asList(0.66, 1.33, 4.0));
         assertEquals(valoresEsperados, result);
     }
 
     @Test
-    @DisplayName("De Lista de valores y total a Proporciones2")
+    @DisplayName("De Lista de valores INT y total a Proporciones2 DOUBLES")
     void deValoresAProporciones2() {
         // 1 - preracion del test
         Calculadora calc = new Calculadora();
         // 2 - Ejecutar lo que vamos a validar
         List<Integer> valores = new ArrayList<Integer>(Arrays.asList(6, 2, 1));
         int total = 60;
-        List<Double> result = calc.valoresProporcionalesDeLista(valores, total);
+        List<Double> result = calc.valoresProporcionalesDeUnaListaInteger(valores, total);
         // 3 - Aserciones
         List<Double> valoresEsperados = new ArrayList<Double>(Arrays.asList(40d, 13.33, 6.66));
 
@@ -76,7 +78,7 @@ public class CalculadoraTest {
         // 2 - Ejecutar lo que vamos a validar
         String texto ="  DOS  Uno  sEIs  ";
         int total = 60;
-        List<Double> result = calc.valoresProporcionalesDeTexto(texto,total);
+        List<Double> result = calc.valoresProporcionalesDeVariasPalabras(texto,total);
         // 3 - Aserciones
         List<Double> valoresEsperados = new ArrayList<Double>(Arrays.asList( 13.33, 6.66, 40d));
 
