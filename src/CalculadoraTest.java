@@ -14,7 +14,7 @@ public class CalculadoraTest {
     // @Test
     @ParameterizedTest
     @DisplayName("UNO->1")
-    @ValueSource(strings = { " uNo", "UNO ", "  uNO  " })
+    @ValueSource(strings = { " uunNOo "," uNo", "UNO ", "  uNO  " })
     void deTextoAValor1(String txt) {
         // 1 - preracion del test
         Calculadora calc = new Calculadora();
@@ -24,7 +24,7 @@ public class CalculadoraTest {
         assertEquals(1, result, result + "->" + txt);
     }
 
-    //Similara para DOS, TRES, etc...
+    //Similar para DOS, TRES, etc...
 
     @Test
     @DisplayName("De Texto a Lista de valores1")

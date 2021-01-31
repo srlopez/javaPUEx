@@ -12,8 +12,12 @@ public class Calculadora {
         List<String> nombres = new ArrayList<>(
                 List.of("cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"));
 
-        String textValid = text.toLowerCase().trim();
-        int idx = nombres.indexOf(textValid);
+        String textNormalizado = text.toLowerCase().trim();
+        // https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html
+        // https://stackoverflow.com/questions/106067/regular-expression-to-replace-two-or-more-consecutive-characters-by-only-one
+        // reemplaza cualquier carácter que aparece más de una vez, por él mismo.
+        textNormalizado = textNormalizado.replaceAll("(.)\\1+", "$1");
+        int idx = nombres.indexOf(textNormalizado);
         return idx < 0 ? 0 : idx;
     }
 
