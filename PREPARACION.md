@@ -39,6 +39,7 @@
   String valor =  1<4?"cierto":"falso";
   for(int i=0, j=0; (?) ;i++, j++ ){...}, while(){...}
   for (int v : valores) t += v;
+  try{···}catch(e){···}
 ```
 - ArrayList/Array <- Conversiones y Declaraciones, Metodos
 ```java
@@ -78,6 +79,10 @@
   text.replace("bb", "DGDG")
   String[] strs = text.split(";")  // obtenemos los textos que se separan por ";"
   text.length()
+  String[] textos = text.trim().split("\\s+");
+  textNormalizado = textNormalizado.replaceAll("(.)\\1+", "$1");
+  i = Integer.parseInt(textNormalizado)
+
 ```
 - Recursividad
 ```java
