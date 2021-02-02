@@ -59,3 +59,42 @@ Elabora un documento en el que `copy/paste` el código de tu aplicación, que 
 - El App.java, que has usado para invocara a los métodos. Incluye la salida que emite por la terminal.
 - La Clase que has diseñado para los métodos que se te pide.
 - La Clase que has creado para pruebas unitarias.
+
+
+## EVALUACIÓN
+
+
+| puntuación | función | método | test |
+| - | -- | -- | -- |
+| #1 | f1: de "tEexto" a int | 1.5 | 1.5 |
+| #2 | f2: de " TxTS texTOS " a colección de int | 0.5 |  1.5 |
+| #3 | f3: de int's + total a doubles's | 1 | 1 |
+| #4 | f4: f2 + f3 | 1| 2 |
+
+Evaluación de las funciones.
+f1: Evalúa los textos y devuelve 0..9. Si no es para todosla nota se divide por la mitad.
+OJO!: sólo valen nombres de digitos y número de 0..9: a partir de 10 el valor es 0, 99=0
+
+f2: Evalúa un String de textos a lista o array de int (el tipo da igual). 
+Si no lo hace bien para todos los puntos son la mitad.
+
+f3: Aplicación de R3. Si o si. No lo hace bien 0.
+
+f4: Si no lo hace bien 0.
+
+Los test deben ejecutarse 'Passed' para que evaluen sus puntos.
+Si alguno pasa y no pasan todos se divide por dos los puntos.
+
+
+Se evalúa cada línea consecutivamente, y para evaluara la siguiente línea se ha de obtener por lo menos un 1 en la línea anterior.
+
+Un alumno en casa evalúa a un alumno en clase y viceversa.
+Si algún alumno se queda sin evaluador, se evalúa él mismo.
+Esta será la nota de la evaluación.
+
+Las notas se registran en:
+https://docs.google.com/spreadsheets/d/1v0QSZKbig8LgZCIgOhuQXiTnUjF9QZ9uRBJNXoqFo4Q/edit?usp=sharing
+
+
+
+

@@ -47,11 +47,11 @@ public class CalculadoraTest {
         // 1 - preracion del test
         Calculadora calc = new Calculadora();
         // 2 - Ejecutar lo que vamos a validar
-        List<Integer> valores = new ArrayList<Integer>(Arrays.asList(0, 7, 9, 3, 5));
-        int total = 660;
+        List<Integer> valores = new ArrayList<Integer>(Arrays.asList( 1500, 4500, 3900));
+        int total = 33;
         List<Double> result = calc.valoresProporcionalesDeUnaListaInteger(valores, total);
         // 3 - Aserciones
-        List<Double> valoresEsperados = new ArrayList<Double>(Arrays.asList(0.66, 1.33, 4.0));
+        List<Double> valoresEsperados = new ArrayList<Double>(Arrays.asList(5.0, 15.0, 13.0));
         assertEquals(valoresEsperados, result);
     }
 
